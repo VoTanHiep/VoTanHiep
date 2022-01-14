@@ -60,7 +60,7 @@ namespace Cau1
                 emp.IdEmployee = tbId.Text;
                 emp.Name = tbName.Text;
                 emp.DateBirth = DateTime.Parse(dtBirth.Value.Date.ToString());
-                emp.Gender = cbDepartment.Text;
+                emp.Gender = cbGender.Text;
                 emp.PlaceBirth = tbPlaceBirth.Text;
                 emp.Department = (Department)cbDepartment.SelectedItem;
 
@@ -72,18 +72,14 @@ namespace Cau1
             }
         }
 
-        private bool CheckData()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         private void btnXoa_Click(object sender, EventArgs e)
         {
             Employee emp = new Employee();
             emp.IdEmployee = tbId.Text;
             emp.Name = tbName.Text;
             emp.DateBirth = DateTime.Parse(dtBirth.Value.Date.ToString());
-            emp.Gender = cbDepartment.Text;
+            emp.Gender = cbGender.Text;
             emp.PlaceBirth = tbPlaceBirth.Text;
 
 
@@ -102,7 +98,7 @@ namespace Cau1
                 empp.IdEmployee = tbId.Text;
                 empp.Name = tbName.Text;
                 empp.DateBirth = DateTime.Parse(dtBirth.Value.Date.ToString());
-                empp.Gender = cbDepartment.Text;
+                empp.Gender = cbGender.Text;
                 empp.PlaceBirth = tbPlaceBirth.Text;
                 empp.Department = (Department)cbDepartment.SelectedItem;
 
