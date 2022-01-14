@@ -26,7 +26,7 @@ namespace Cau1
             List<Employee> lstEmploy = EmployBAL.ReadCustomer();
             foreach (Employee Emp in lstEmploy)
             {
-                dgvEmployee.Rows.Add(Emp.IdEmployee, Emp.Name, Emp.DateBirth, Emp.Gender, Emp.PlaceBirth, Emp.Depart);
+                dgvEmployee.Rows.Add(Emp.IdEmployee, Emp.Name, Emp.DateBirth, Emp.Gender, Emp.PlaceBirth, Emp.Department.Name_Department);
 
             }
             List<Department> lstDepart = DepartmentBAL.ReadAreaList();
@@ -109,7 +109,7 @@ namespace Cau1
                 row.Cells[2].Value = empp.DateBirth;
                 row.Cells[3].Value = empp.Gender;
                 row.Cells[4].Value = empp.PlaceBirth;
-                row.Cells[5].Value = empp.Department;
+                row.Cells[5].Value = empp.Department.Name_Department;
             }
         }
 
