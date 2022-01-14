@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cau1.BAL;
-using Cau1.MODEL;
+using Cau1.Model;
 
 namespace Cau1
 {
@@ -46,7 +46,7 @@ namespace Cau1
                 tbId.Text = row.Cells[0].Value.ToString();
                 tbName.Text = row.Cells[1].Value.ToString();
                 dtBirth.Text = row.Cells[2].Value.ToString();
-                cbDepartment.Text = row.Cells[3].Value.ToString();
+                cbGender.Text = row.Cells[3].Value.ToString();
                 tbPlaceBirth.Text = row.Cells[4].Value.ToString();
                 cbDepartment.Text = row.Cells[5].Value.ToString();
             }
@@ -66,7 +66,7 @@ namespace Cau1
 
 
 
-                EmployeeBAL.NewEmployee(emp);
+                EmployBAL.NewEmployee(emp);
 
                 dgvEmployee.Rows.Add(emp.IdEmployee, emp.Name, emp.DateBirth, emp.Gender, emp.PlaceBirth, emp.Department.Name_Department);
             }
@@ -163,4 +163,3 @@ namespace Cau1
             }
         }
     }
-}

@@ -35,7 +35,6 @@ namespace Cau1
             this.tbName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtBirth = new System.Windows.Forms.DateTimePicker();
-            this.cbGender = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ namespace Cau1
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.cbGender = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,16 +102,6 @@ namespace Cau1
             this.dtBirth.Size = new System.Drawing.Size(250, 27);
             this.dtBirth.TabIndex = 5;
             // 
-            // cbGender
-            // 
-            this.cbGender.AutoSize = true;
-            this.cbGender.Location = new System.Drawing.Point(735, 16);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(120, 24);
-            this.cbGender.TabIndex = 6;
-            this.cbGender.Text = "Giới tính nam";
-            this.cbGender.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -159,6 +149,7 @@ namespace Cau1
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.RowHeadersWidth = 51;
             this.dgvEmployee.RowTemplate.Height = 29;
+            this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployee.Size = new System.Drawing.Size(843, 336);
             this.dgvEmployee.TabIndex = 11;
             this.dgvEmployee.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_RowEnter);
@@ -251,6 +242,16 @@ namespace Cau1
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // cbGender
+            // 
+            this.cbGender.AutoSize = true;
+            this.cbGender.Location = new System.Drawing.Point(735, 16);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(120, 24);
+            this.cbGender.TabIndex = 6;
+            this.cbGender.Text = "Giới tính nam";
+            this.cbGender.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -289,7 +290,6 @@ namespace Cau1
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtBirth;
-        private System.Windows.Forms.CheckBox cbGender;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbDepartment;
         private System.Windows.Forms.Label label5;
@@ -305,6 +305,7 @@ namespace Cau1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.CheckBox cbGender;
     }
 }
 
