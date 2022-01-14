@@ -6,4 +6,11 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="BAL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="GUI\" />
+    <Folder Include="MODEL\" />
+  </ItemGroup>
+
 </Project>
