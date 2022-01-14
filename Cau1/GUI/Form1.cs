@@ -26,7 +26,7 @@ namespace Cau1
             List<Employee> lstEmploy = EmployBAL.ReadCustomer();
             foreach (Employee Emp in lstEmploy)
             {
-                dgvCustomer.Rows.Add(Emp.IdEmployee, Emp.Name, Emp.DateBirth, Emp.Gender, Emp.PlaceBirth, Emp.Depart);
+                dgvEmployee.Rows.Add(Emp.IdEmployee, Emp.Name, Emp.DateBirth, Emp.Gender, Emp.PlaceBirth, Emp.Depart);
 
             }
             List<Department> lstDepart = DepartmentBAL.ReadAreaList();
@@ -40,7 +40,7 @@ namespace Cau1
         private void dgvCustomer_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-            DataGridViewRow row = dgvCustomer.Rows[idx];
+            DataGridViewRow row = dgvEmployee.Rows[idx];
             if (row.Cells[0].Value != null)
             {
                 tbId.Text = row.Cells[0].Value.ToString();
@@ -68,7 +68,7 @@ namespace Cau1
 
                 EmployeeBAL.NewEmployee(emp);
 
-                dgvCustomer.Rows.Add(emp.IdEmployee, emp.Name, emp.DateBirth, emp.Gender, emp.PlaceBirth, emp.Department.Name_Department);
+                dgvEmployee.Rows.Add(emp.IdEmployee, emp.Name, emp.DateBirth, emp.Gender, emp.PlaceBirth, emp.Department.Name_Department);
             }
         }
 
@@ -88,15 +88,15 @@ namespace Cau1
 
 
             EmployBAL.DeleteEmployee(emp);
-            int idx = dgvCustomer.CurrentCell.RowIndex;
-            dgvCustomer.Rows.RemoveAt(idx);
+            int idx = dgvEmployee.CurrentCell.RowIndex;
+            dgvEmployee.Rows.RemoveAt(idx);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (checkData())
             {
-                DataGridViewRow row = dgvCustomer.CurrentRow;
+                DataGridViewRow row = dgvEmployee.CurrentRow;
 
                 Employee empp = new Employee();
                 empp.IdEmployee = tbId.Text;
