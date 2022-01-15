@@ -245,11 +245,11 @@ namespace Cau1
             // cbGender
             // 
             this.cbGender.AutoSize = true;
-            this.cbGender.Location = new System.Drawing.Point(735, 16);
+            this.cbGender.Location = new System.Drawing.Point(745, 17);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(120, 24);
+            this.cbGender.Size = new System.Drawing.Size(65, 24);
             this.cbGender.TabIndex = 6;
-            this.cbGender.Text = "Giới tính nam";
+            this.cbGender.Text = "NAM";
             this.cbGender.UseVisualStyleBackColor = true;
             // 
             // Form1
